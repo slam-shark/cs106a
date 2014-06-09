@@ -18,13 +18,27 @@ public class CollectNewspaperKarel extends SuperKarel {
 
     @Override
     public void run() {
+	
+	goAhead();
+	pickBeeper();
+	goBack();
+	
+    }
+
+    private void goBack() {
+	turnAround();
+	goAhead();
+	turnAround();
+    }
+
+    private void goAhead() {
 	move();
 	turnRight();
 	move();
 	turnLeft();
 	move();
 	move();
-	pickBeeper();
+	
     }
 
 }
